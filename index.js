@@ -4,6 +4,9 @@ const cors=require('cors');
 const mongoose=require('mongoose');
 require("dotenv").config()
 
+const PORT= process.env.PORT || 5000;
+
+
 const app=express();
 
 const corsOptions={
@@ -30,7 +33,6 @@ app.use('/api/note',require('./routes/notes.js'));
 
 //const port= process.env.PORT || 5000;
 
-const PORT= process.env.PORT || 5000;
 
 app.listen(PORT,()=>{
     console.log("Listen");
