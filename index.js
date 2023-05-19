@@ -17,7 +17,7 @@ app.use(cors(corsOptions));
 app.use(express.json());  //middleware
 
 
-const DB=process.env.MONGO_DB_URL;
+const DB=process.env.DATABASE;
 
 mongoose.connect(DB).then(()=>{ 
     console.log("Connected");
